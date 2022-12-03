@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cedalanavi.projet_IJVA500_SOA_users.CreateUserRequest;
 import com.cedalanavi.projet_IJVA500_SOA_users.UpdateUserRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.Entities.User;
 import com.cedalanavi.projet_IJVA500_SOA_users.Services.UserService;
 
 @RestController
