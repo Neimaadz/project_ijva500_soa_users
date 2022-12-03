@@ -18,14 +18,14 @@ public class UserService {
 	public User createUser(CreateUserRequest userRequest) {
 		
 		
-		User userExist = userRepository.findByUsername(userRequest.Username);
+		User userExist = userRepository.findByUsername(userRequest.username);
 		
 		// Test si user existe déjà + le cas du username/mdp vide
-		if(userExist == null && userRequest.Username != "" && userRequest.Password != "") {
+		if(userExist == null && userRequest.username != "" && userRequest.password != "") {
 			
 			User newUser = new User();
-			newUser.setUsername(userRequest.Username);
-			newUser.setPassword(userRequest.Password);
+			newUser.setUsername(userRequest.username);
+			newUser.setPassword(userRequest.password);
 			
 			return userRepository.save(newUser);
 		} else {
@@ -42,7 +42,7 @@ public class UserService {
 	public void updateUser(UpdateUserRequest userRequest, int id) {
 		User updatedUser = userRepository.findById(id).get();
 
-		updatedUser.setPassword(userRequest.Password);
+		updatedUser.setPassword(userRequest.password);
 		
 		userRepository.save(updatedUser);
 		

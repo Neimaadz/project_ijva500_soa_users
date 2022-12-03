@@ -8,8 +8,8 @@ import lombok.Data;
 public class CreateUserRequest {
 
 	@JsonIgnore(value = false)
-	public String Username;
+	public String username;
 	
 	@JsonIgnore(value = false)
-	public String Password;
+	public String password;
 }

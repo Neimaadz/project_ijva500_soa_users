@@ -8,5 +8,5 @@ import lombok.Data;
 public class UpdateUserRequest {
 	
 	@JsonIgnore(value = false)
-	public String Password;
+	public String password;
 }
