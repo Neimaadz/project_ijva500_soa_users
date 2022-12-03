@@ -5,10 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
-public class UserRequest {
-
-	@JsonIgnore(value = false)
-	public String Username;
+public class UpdateUserRequest {
 	
 	@JsonIgnore(value = false)
 	public String Password;
