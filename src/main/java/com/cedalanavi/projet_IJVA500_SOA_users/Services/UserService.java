@@ -56,7 +56,6 @@ public class UserService implements UserDetailsService {
 		User updatedUser = userRepository.findById(id).get();
 		updatedUser.setPassword(userRequest.password);
 		userRepository.save(updatedUser);
-		
 	}
 
 
@@ -64,7 +63,6 @@ public class UserService implements UserDetailsService {
     @Transactional(readOnly = true)
     // Override the UserDetailsService method using by Spring Security
     public UserDetails loadUserByUsername(String username) {
-    	
         com.cedalanavi.projet_IJVA500_SOA_users.Entities.User user = userRepository.findByUsername(username);
         
         if (user == null) {
