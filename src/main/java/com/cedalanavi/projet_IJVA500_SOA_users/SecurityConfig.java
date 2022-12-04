@@ -23,7 +23,7 @@ import com.cedalanavi.projet_IJVA500_SOA_users.Utils.JwtRequestFilter;
 public class SecurityConfig {
 	
 	@Autowired
-	private JwtAuthEntryPoint jwtAuthenticationEntryPoint;
+	private JwtAuthEntryPoint jwtAuthEntryPoint;
 	
 	@Autowired
 	private JwtRequestFilter jwtRequestFilter;
@@ -38,7 +38,7 @@ public class SecurityConfig {
     	http.csrf().disable()
 			// make sure we use stateless session; session won't be used to
 			// store user's state.
-		  	.exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
+		  	.exceptionHandling().authenticationEntryPoint(jwtAuthEntryPoint)
 		  	.and()
 		  	.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		  	.and()
