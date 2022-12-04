@@ -9,6 +9,4 @@ import com.cedalanavi.projet_IJVA500_SOA_users.Entities.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 	User findByUsername(String username);
-	
-	
 }

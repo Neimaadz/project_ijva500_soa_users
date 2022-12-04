@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cedalanavi.projet_IJVA500_SOA_users.CreateUserRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.UpdateUserRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.CreateUserRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.UpdateUserRequest;
 import com.cedalanavi.projet_IJVA500_SOA_users.Services.UserService;
 
 @RestController
@@ -21,7 +21,6 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
 	
 	/* Méthode createUser 
 	 * Vérifie que user.username ne soit pas nul et n'existe pas déjà
