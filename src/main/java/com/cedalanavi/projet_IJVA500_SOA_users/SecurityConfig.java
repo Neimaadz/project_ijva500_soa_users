@@ -16,10 +16,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.cedalanavi.projet_IJVA500_SOA_users.Utils.JwtAuthEntryPoint;
 import com.cedalanavi.projet_IJVA500_SOA_users.Utils.JwtRequestFilter;
-  
+
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)	// enable annotation e.g: @preAuthorize()...
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 	
 	@Autowired
@@ -35,18 +35,13 @@ public class SecurityConfig {
     
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    	http.csrf().disable()
-			// make sure we use stateless session; session won't be used to
-			// store user's state.
+    	http.cors().and().csrf().disable()
 		  	.exceptionHandling().authenticationEntryPoint(jwtAuthEntryPoint)
 		  	.and()
+			// make sure we use stateless session; session won't be used to store user's state
 		  	.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		  	.and()
-			// dont authenticate this particular request
-			.authorizeRequests().antMatchers("/authentication-user/**").permitAll()
 			.and()
 			.authorizeRequests().antMatchers("/manage-user/create").permitAll()
-			// all other requests need to be authenticated
 			.anyRequest().authenticated();
     	
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

@@ -18,9 +18,6 @@ public class User {
 	
 	@NonNull
 	private String username;
-	
-	@NonNull
-	private String password;
 
 	
 	/* Getters & Setters */
@@ -41,14 +38,5 @@ public class User {
 		this.username = username;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	
 	
 }
