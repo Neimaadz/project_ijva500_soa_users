@@ -4,8 +4,8 @@ package com.cedalanavi.projet_IJVA500_SOA_users.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.CreateUserRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.UpdateUserRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserCreateRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserUpdateRequest;
 import com.cedalanavi.projet_IJVA500_SOA_users.Entities.User;
 import com.cedalanavi.projet_IJVA500_SOA_users.Repositories.UserRepository;
 
@@ -19,7 +19,7 @@ public class UserService {
 		return userRepository.findByUsername(username);
 	}
 	
-	public User createUser(CreateUserRequest userRequest) {
+	public User createUser(UserCreateRequest userRequest) {
 		User userExist = userRepository.findByUsername(userRequest.username);
 		
 		// Test if user already exist and handle empty password
@@ -38,7 +38,7 @@ public class UserService {
 		userRepository.deleteById(id);
 	}
 	
-	public void updateUser(UpdateUserRequest userRequest, int id) {
+	public void updateUser(UserUpdateRequest userRequest, int id) {
 		User updatedUser = userRepository.findById(id).get();
 		userRepository.save(updatedUser);
 	}

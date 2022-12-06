@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.CreateUserRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.UpdateUserRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserCreateRequest;
+import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserUpdateRequest;
 import com.cedalanavi.projet_IJVA500_SOA_users.Services.UserService;
 
 @RestController
@@ -23,7 +23,7 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping("/create")
-	public void createUser(@RequestBody CreateUserRequest userRequest, HttpServletResponse response) {
+	public void createUser(@RequestBody UserCreateRequest userRequest, HttpServletResponse response) {
 		if (userService.createUser(userRequest) != null) {
 			response.setStatus(HttpServletResponse.SC_OK);
 		}
@@ -38,7 +38,7 @@ public class UserController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public void updateUser(@RequestBody UpdateUserRequest userRequest, @PathVariable int id) {
+	public void updateUser(@RequestBody UserUpdateRequest userRequest, @PathVariable int id) {
 		userService.updateUser(userRequest, id);
 	}
 	
