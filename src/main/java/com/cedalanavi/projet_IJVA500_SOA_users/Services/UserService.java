@@ -22,8 +22,8 @@ public class UserService {
 	public User createUser(CreateUserRequest userRequest) {
 		User userExist = userRepository.findByUsername(userRequest.username);
 		
-		// Test si user existe déjà + le cas du username/mdp vide
-		if(userExist == null && userRequest.username != "" && userRequest.password != "") {
+		// Test if user already exist and handle empty password
+		if(userExist == null && userRequest.username != "") {
 			
 			User newUser = new User();
 			newUser.setUsername(userRequest.username);

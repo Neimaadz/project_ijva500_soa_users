@@ -22,10 +22,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	/* Méthode createUser 
-	 * Vérifie que user.username ne soit pas nul et n'existe pas déjà
-	 * Vérifie que user.password ne soit pas nul
-	 */
 	@PostMapping("/create")
 	public void createUser(@RequestBody CreateUserRequest userRequest, HttpServletResponse response) {
 		if (userService.createUser(userRequest) != null) {
