@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Utils;
+package com.cedalanavi.projet_IJVA500_SOA_users.Security;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,8 +24,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.OncePerRequestFilter;
-
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserDetailsResource;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {

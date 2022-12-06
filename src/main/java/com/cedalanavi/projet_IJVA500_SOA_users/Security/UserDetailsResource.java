@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Data;
+package com.cedalanavi.projet_IJVA500_SOA_users.Security;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Utils;
+package com.cedalanavi.projet_IJVA500_SOA_users.Security;
 
 import java.io.IOException;
 import java.io.Serializable;
