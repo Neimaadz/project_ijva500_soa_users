@@ -35,7 +35,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     @Qualifier("myRestTemplate")
 	RestTemplate restTemplate;
 	
-	private List<String> skipUrls = Arrays.asList("/manage-user/create");
+	private List<String> skipUrls = Arrays.asList();
 	
 	private AntPathMatcher pathMatcher = new AntPathMatcher();
 
