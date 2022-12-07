@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Security;
+package com.cedalanavi.projet_IJVA500_SOA_users.Securities;
 
 import java.io.IOException;
 import java.util.Arrays;

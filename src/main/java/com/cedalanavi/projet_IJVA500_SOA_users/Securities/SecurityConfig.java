@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Security;
+package com.cedalanavi.projet_IJVA500_SOA_users.Securities;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
