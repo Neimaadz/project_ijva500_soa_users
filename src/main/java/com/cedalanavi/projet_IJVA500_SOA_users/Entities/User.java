@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.NonNull;
+import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name = "user")
@@ -18,7 +18,6 @@ public class User {
 	
 	@NonNull
 	private String username;
-
 	
 	/* Getters & Setters */
 	
