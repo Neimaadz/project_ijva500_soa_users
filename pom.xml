@@ -52,7 +52,22 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
-	    
+		
+		<!-- Use local jar -->
+		<!--
+	    <dependency>
+		    <groupId>com.cedalanavi</groupId>
+		    <artifactId>projet_IJVA500_SOA_utils</artifactId>
+		    <version>1.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/src/main/resources/projet_IJVA500_SOA_utils-1.0.jar</systemPath>
+		</dependency>
+		-->
+		<dependency>
+		  <groupId>com.cedalanavi</groupId>
+		  <artifactId>projet_ijva500_soa_utils</artifactId>
+		  <version>1.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
