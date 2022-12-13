@@ -1,9 +1,9 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Repositories;
+package com.cedalanavi.project_ijva500_soa_users.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cedalanavi.projet_IJVA500_SOA_users.Entities.User;
+import com.cedalanavi.project_ijva500_soa_users.Entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {

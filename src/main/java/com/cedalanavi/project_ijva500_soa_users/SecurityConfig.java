@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users;
+package com.cedalanavi.project_ijva500_soa_users;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

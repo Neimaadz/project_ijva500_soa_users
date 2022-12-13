@@ -1,4 +1,4 @@
-package com.cedalanavi.projet_IJVA500_SOA_users;
+package com.cedalanavi.project_ijva500_soa_users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,10 @@ import com.cedalanavi.projet_IJVA500_SOA_utils.RestTemplateConfig;
 
 @SpringBootApplication
 @Import({ RestTemplateConfig.class, JwtAuthEntryPoint.class, JwtRequestFilter.class })
-public class ProjetIJVA500SoaUsersApplication {
+public class ProjectIjva500SoaUsersApplication {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetIJVA500SoaUsersApplication.class, args);
+		SpringApplication.run(ProjectIjva500SoaUsersApplication.class, args);
 	}
 
 }

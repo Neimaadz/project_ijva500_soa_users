@@ -1,13 +1,13 @@
-package com.cedalanavi.projet_IJVA500_SOA_users.Services;
+package com.cedalanavi.project_ijva500_soa_users.Services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserCreateRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.Data.UserUpdateRequest;
-import com.cedalanavi.projet_IJVA500_SOA_users.Entities.User;
-import com.cedalanavi.projet_IJVA500_SOA_users.Repositories.UserRepository;
+import com.cedalanavi.project_ijva500_soa_users.Data.UserCreateRequest;
+import com.cedalanavi.project_ijva500_soa_users.Data.UserUpdateRequest;
+import com.cedalanavi.project_ijva500_soa_users.Entities.User;
+import com.cedalanavi.project_ijva500_soa_users.Repositories.UserRepository;
 
 @Service
 public class UserService {
