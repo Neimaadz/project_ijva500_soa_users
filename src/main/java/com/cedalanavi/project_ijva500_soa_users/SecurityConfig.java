@@ -14,8 +14,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.cedalanavi.projet_IJVA500_SOA_utils.JwtAuthEntryPoint;
-import com.cedalanavi.projet_IJVA500_SOA_utils.JwtRequestFilter;
+import com.cedalanavi.project_ijva500_soa_utils.JwtAuthEntryPoint;
+import com.cedalanavi.project_ijva500_soa_utils.JwtRequestFilter;
 
 @Configuration
 @EnableWebSecurity
