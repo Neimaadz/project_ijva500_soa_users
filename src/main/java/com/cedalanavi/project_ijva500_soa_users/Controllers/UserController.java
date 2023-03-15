@@ -1,9 +1,12 @@
 package com.cedalanavi.project_ijva500_soa_users.Controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cedalanavi.project_ijva500_soa_users.Data.UserCreateRequest;
 import com.cedalanavi.project_ijva500_soa_users.Data.UserUpdateRequest;
+import com.cedalanavi.project_ijva500_soa_users.Entities.User;
 import com.cedalanavi.project_ijva500_soa_users.Services.UserService;
 
 @RestController
@@ -21,6 +25,16 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+
+	@GetMapping("/users")
+	public List<User> getUsers() {
+		return userService.getUsers();
+	}
+	
+	@GetMapping("/user/{id}")
+	public User getUser(@PathVariable int id) {
+		return userService.getUserById(id);
+	}
 	
 	@PostMapping("/create")
 	public void createUser(@RequestBody UserCreateRequest userRequest, HttpServletResponse response) {
