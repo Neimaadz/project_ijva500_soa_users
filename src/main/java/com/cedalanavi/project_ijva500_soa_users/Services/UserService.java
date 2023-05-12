@@ -21,8 +21,8 @@ public class UserService {
 		return userRepository.findAll();
 	}
 	
-	public User getUserById(int idUser) {
-		return userRepository.findById(idUser).get();
+	public User getUserByIdUser(String idUser) {
+		return userRepository.findByIdUser(idUser).get();
 	}
 	
 	public User createUser(UserCreateRequest userRequest) {
@@ -32,6 +32,7 @@ public class UserService {
 		if(userExist == null && userRequest.username != "") {
 			
 			User newUser = new User();
+			newUser.setIdUser(userRequest.idUser);
 			newUser.setUsername(userRequest.username);
 			
 			return userRepository.save(newUser);
@@ -40,12 +41,13 @@ public class UserService {
 		}
 	}
 	
-	public void deleteUser(int id) {
-		userRepository.deleteById(id);
+	public void deleteUser(String idUser) {
+		User updatedUser = userRepository.findByIdUser(idUser).get();
+		userRepository.deleteById(updatedUser.getId());
 	}
 	
-	public void updateUser(UserUpdateRequest userRequest, int id) {
-		User updatedUser = userRepository.findById(id).get();
-		userRepository.save(updatedUser);
+	public void updateUser(UserUpdateRequest userRequest, String idUser) {
+		User updatedUser = userRepository.findByIdUser(idUser).get();
+		userRepository.save(updatedUser);	// TODO: NOTHING TO UPDATED
 	}
 }
