@@ -17,6 +17,9 @@ public class User {
 	private int id;
 	
 	@NonNull
+	private String idUser;
+	
+	@NonNull
 	private String username;
 	
 	/* Getters & Setters */
@@ -27,6 +30,14 @@ public class User {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(String idUser) {
+		this.idUser = idUser;
 	}
 
 	public String getUsername() {
