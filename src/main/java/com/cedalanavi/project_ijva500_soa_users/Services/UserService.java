@@ -46,8 +46,8 @@ public class UserService {
 		userRepository.deleteById(updatedUser.getId());
 	}
 	
-	public void updateUser(UserUpdateRequest userRequest, String idUser) {
-		User updatedUser = userRepository.findByIdUser(idUser).get();
-		userRepository.save(updatedUser);	// TODO: NOTHING TO UPDATED
+	public void updateUser(String idUser, UserUpdateRequest userUpdateRequest) {
+		User user = userRepository.findByIdUser(idUser).get();
+		userRepository.save(user);	// TODO nothing changed
 	}
 }
